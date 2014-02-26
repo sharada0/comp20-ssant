@@ -7,6 +7,10 @@ function draw() {
 	var canvas = document.getElementById('game');
 	var ctx = canvas.getContext('2d');
 
+	// Blue sky
+	ctx.fillStyle="#87CEEB";
+	ctx.fillRect(0,0,600,800);
+
 	// Plain brown dirt road
 	ctx.fillStyle="#C96A1B";
 	ctx.fillRect(0,550,800,50);
