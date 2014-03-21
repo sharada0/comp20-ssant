@@ -15,30 +15,14 @@
                 var minute = timestamp.getMinutes();
                 
                 var update = document.getElementById("msg");
-//              var listOfUpdates = document.getElementById("The List");
-//              var newUpdate = document.createElement("li");
-//              var updateText = document.createTextNode(update.value);
-//              var fullDate = document.createTextNode(month+"/"+date+"/"+year+" "+hour+":"+minute+" - ");
-                
-//              newUpdate.appendChild(fullDate);
-//              newUpdate.appendChild(updateText);
-
-                updateText = update.value;
-                fullDate = ""+month+"/"+date+"/"+year+" "+hour+":"+minute+" - ";
-                fullUpdate = fullDate + updateText;
-
-                localStorage[timestamp.getTime()] = fullUpdate;
-                reload();
-//                listOfUpdates.insertBefore(newUpdate, listOfUpdates.childNodes[0]);
-            }
-            function reload()
-            {
                 var listOfUpdates = document.getElementById("The List");
-                output = "";
-                for (key in localStorage) {
-                    output = output + "<li>" + localStorage[key] + "</li>\n";
-                }
-                listOfUpdates.innerHTML = output;
+                var newUpdate = document.createElement("li");
+                var updateText = document.createTextNode(update.value);
+                var fullDate = document.createTextNode(month+"/"+date+"/"+year+" "+hour+":"+minute+" - ");
+                
+                newUpdate.appendChild(fullDate);
+                newUpdate.appendChild(updateText);
+                listOfUpdates.insertBefore(newUpdate, listOfUpdates.childNodes[0]);
             }
         </script>
     </head>
