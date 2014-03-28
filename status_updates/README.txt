@@ -3,6 +3,9 @@ Sharada Sant
 Lab 7 - Comp 20
 
 
+The html file for this lab is profile.html
+The profile0.html file can be ignored (it is just lab 5 unchanged).
+
 I correctly stored messages in local storage, 
 and messages are redisplayed on return to the page.
 
