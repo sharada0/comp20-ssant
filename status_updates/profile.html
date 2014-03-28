@@ -15,13 +15,6 @@
                 var minute = timestamp.getMinutes();
                 
                 var update = document.getElementById("msg");
-//              var listOfUpdates = document.getElementById("The List");
-//              var newUpdate = document.createElement("li");
-//              var updateText = document.createTextNode(update.value);
-//              var fullDate = document.createTextNode(month+"/"+date+"/"+year+" "+hour+":"+minute+" - ");
-                
-//              newUpdate.appendChild(fullDate);
-//              newUpdate.appendChild(updateText);
 
                 updateText = update.value;
                 fullDate = ""+month+"/"+date+"/"+year+" "+hour+":"+minute+" - ";
@@ -29,14 +22,19 @@
 
                 localStorage[timestamp.getTime()] = fullUpdate;
                 reload();
-//                listOfUpdates.insertBefore(newUpdate, listOfUpdates.childNodes[0]);
             }
             function reload()
             {
                 var listOfUpdates = document.getElementById("The List");
-                output = "";
+                var msgsReverseOrder = [];
+                i = 0;
                 for (key in localStorage) {
-                    output = output + "<li>" + localStorage[key] + "</li>\n";
+                    msgsReverseOrder[i] = localStorage[key];
+                    i++;
+                }
+                output = "";
+                for (j = i-1; j >=0; j--) {
+                    output = output + "<li>" + msgsReverseOrder[j] + "</li>\n";
                 }
                 listOfUpdates.innerHTML = output;
             }
