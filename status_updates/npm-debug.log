@@ -1,0 +1,50 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose cache add [ '.', null ]
+5 verbose cache add name=undefined spec="." args=[".",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: '.',
+6 verbose parsed url   path: '.',
+6 verbose parsed url   href: '.' }
+7 silly lockFile 3a52ce78- .
+8 verbose lock . /Users/Sharada/.npm/3a52ce78-.lock
+9 verbose tar pack [ '/var/folders/fd/584l88z149d7tw8n829fc38w0000gn/T/npm-8760-Uw6iZ52r/1396983738678-0.4665859395172447/tmp.tgz',
+9 verbose tar pack   '.' ]
+10 verbose tarball /var/folders/fd/584l88z149d7tw8n829fc38w0000gn/T/npm-8760-Uw6iZ52r/1396983738678-0.4665859395172447/tmp.tgz
+11 verbose folder .
+12 info prepublish status_updates@0.0.0
+13 silly lockFile 1f1177db-tar tar://.
+14 verbose lock tar://. /Users/Sharada/.npm/1f1177db-tar.lock
+15 silly lockFile 973e11c9-38678-0-4665859395172447-tmp-tgz tar:///var/folders/fd/584l88z149d7tw8n829fc38w0000gn/T/npm-8760-Uw6iZ52r/1396983738678-0.4665859395172447/tmp.tgz
+16 verbose lock tar:///var/folders/fd/584l88z149d7tw8n829fc38w0000gn/T/npm-8760-Uw6iZ52r/1396983738678-0.4665859395172447/tmp.tgz /Users/Sharada/.npm/973e11c9-38678-0-4665859395172447-tmp-tgz.lock
+17 error tar pack Error reading .
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 973e11c9-38678-0-4665859395172447-tmp-tgz tar:///var/folders/fd/584l88z149d7tw8n829fc38w0000gn/T/npm-8760-Uw6iZ52r/1396983738678-0.4665859395172447/tmp.tgz
+21 silly lockFile 973e11c9-38678-0-4665859395172447-tmp-tgz tar:///var/folders/fd/584l88z149d7tw8n829fc38w0000gn/T/npm-8760-Uw6iZ52r/1396983738678-0.4665859395172447/tmp.tgz
+22 error addLocalDirectory Could not pack "." to "/var/folders/fd/584l88z149d7tw8n829fc38w0000gn/T/npm-8760-Uw6iZ52r/1396983738678-0.4665859395172447/tmp.tgz"
+23 silly lockFile 3a52ce78- .
+24 silly lockFile 3a52ce78- .
+25 error addLocal Could not install .
+26 error Error: EISDIR, read
+27 error If you need help, you may report this *entire* log,
+27 error including the npm and node versions, at:
+27 error     <http://github.com/npm/npm/issues>
+28 error System Darwin 13.1.0
+29 error command "node" "/usr/local/bin/npm" "install" "-g"
+30 error cwd /Users/Sharada/comp20/comp20-ssant/status_updates
+31 error node -v v0.10.26
+32 error npm -v 1.4.3
+33 error code EISDIR
+34 error errno 28
+35 verbose exit [ 28, true ]
