@@ -13,11 +13,10 @@
   "author": "sharada",
   "license": "ISC",
   "dependencies": {
-    "package.json": "0.0.0"
-  }
-}
-
-{
+    "package.json": "0.0.0",
+    "logfmt": "^1.1.2",
+    "express": "^3.5.1"
+  },
   "engines": {
     "node": "0.10.x"
   }
