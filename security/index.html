@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>A5 Security</title>
+</head>
+
+<body>
+
+<h1>Security Assessment of 2048 Game Center</h1>
+<h3>By: Sharada Sant<br>
+April 25, 2014</h3>
+
+<h4>I. Introduction</h4>
+<p>This assignment is a followup to the previous assignment, in which students 
+made a 2048 Game Center application, which used a Mongo database to store final 
+scores, usernames, and grids for the recent popular game 2048, created by 
+Gabriele Cirulli. The goal of this assignment was to find security vulnerabilities 
+in the Game Center of another student, Skyler Tom. For each vulnerability, 
+documentation was sought for the issue, location, severity, and resolution.
+</p>
+
+<h4>II. Methodology</h4>
+<p>"Black box" testing was the first method used, attempting to perform attacks 
+without looking at any of the source code. The first security vulnerability described 
+in this report was found in this manner. Following this, "white box" testing 
+was done to search for vulnerabilities by looking at the code, and this revealed the 
+second and third vulnerabilities described in this report.
+</p>
+
+<h4>III. Abstract of Findings</h4>
+<p>There are several security vulnerabilities found in the Game Center app. The main 
+reason behind most of the vulnerabilities is that the application does not properly 
+check user input, and instead simply assumes that it will always be as expected. 
+However, this leaves the door open for users with malicious intent to exploit this 
+lack of validation by providing incorrect or unexpected input, which can unfortunately 
+have serious consequences on the app's functionality. Fortunately, there are simple ways 
+in which these types of issues can be resolved, to make a more secure application.
+</p>
+
+<h4>IV. Issues Found</h4>
+<p>
+1. Issue: No input validation for usernames<br><br>
+Location: app.js<br>
+Severity: High. This provides easy access to hackers to insert malicious code as 
+use input, which could have consequences ranging from humorous to devastating, 
+depending on how evil the hacker wants to be.<br>
+Description: <br>
+Fix: Add in code to check / validate the username input 
+(i.e., alphanumeric, no special characters, less than 10 characters in length).<br>
+<br>
+2. Issue: The Mongo database is not protected<br><br>
+Location: app.js<br>
+Severity: Medium. <br>
+Description: <br>
+Anyone can insert or remove or otherwise alter data in the 
+database simply by accessing Mongo from the terminal.<br>
+Fix: Enable authentication for Mongo<br>
+<br>
+3. Issue: CORS - Universal Allow<br><br>
+Location: app.js<br>
+Severity: Medium. <br>
+Description: <br>
+Fix: Either add code to validate the response, or add in 
+a method of authentication for XMLHttpRequest<br>
+</p>
+
+<h4>V. Conclusion</h4>
+<p>
+</p>
+
+</body>
+
+</html>
