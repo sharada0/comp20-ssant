@@ -46,28 +46,37 @@ Location: app.js<br>
 Severity: High. This provides easy access to hackers to insert malicious code as 
 use input, which could have consequences ranging from humorous to devastating, 
 depending on how evil the hacker wants to be.<br>
-Description: <br>
+Description: Because no checks are present, the user can give any input they want, such as a link to www.omfgdogs.com, which overwhelmed the database.<br>
+<br>
+<img src="omfgdogshack.png" alt="omfg dogs" height="300" width="500"><br><br>
 Fix: Add in code to check / validate the username input 
 (i.e., alphanumeric, no special characters, less than 10 characters in length).<br>
 <br>
 2. Issue: The Mongo database is not protected<br><br>
 Location: app.js<br>
-Severity: Medium. <br>
-Description: <br>
-Anyone can insert or remove or otherwise alter data in the 
+Severity: Medium. Not protecting the database can lead to serious problems, but it 
+is not as easily accessed as Issue #1 (user needs some knowledge of Mongo to abuse 
+this vulnerability)<br>
+Description: Anyone can insert or remove or otherwise alter data in the 
 database simply by accessing Mongo from the terminal.<br>
+<br>
+<img src="mongohack.png" alt="mongo hack"><br><br>
 Fix: Enable authentication for Mongo<br>
 <br>
 3. Issue: CORS - Universal Allow<br><br>
 Location: app.js<br>
-Severity: Medium. <br>
-Description: <br>
+Severity: Medium. Like Issue #2, it is a potentially serious vulnerability, but it 
+takes a slightly more experienced/knowledgeable user to make use of this vulnerability.<br>
+Description: The * means that anything is allowed (universal), which could have serious repercussions because there is no restriction on what it could be.<br>
+<br>
+<img src="star.png" alt="star" height="400" width="550"><br><br>
 Fix: Either add code to validate the response, or add in 
 a method of authentication for XMLHttpRequest<br>
 </p>
 
 <h4>V. Conclusion</h4>
 <p>
+In conclusion, there were several different security vulnerabilities found in the 2048 Game Center application, which could have seriously negative ramification if taken advantage by a malicious user. Fortunately, the vulnerabilities can be resolved relatively easily, and by resolving these issues, the application will be much more secure.
 </p>
 
 </body>
